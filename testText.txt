@@ -1,3 +1,7 @@
 dodao text u text file
 
+<<<<<<< HEAD
 treci dodatak teksta
+=======
+druga dopuna texta
+>>>>>>> b0a48df25bb6fbb777caa2fa757f7ea63a465978
