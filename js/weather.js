@@ -73,7 +73,13 @@ window.addEventListener("load", ()=>{
 
 	let{name, age, gender} = person;
 
-	export default function contact(name, age){
-		console.log(`The name is ${name}. The age is ${age}`);
-	}
+	let arr1 = ["one", "two"];
+	let arr2 = [...arr1, "three", "four"];
+
+	console.log(arr2);
 });
+/*
+export default function contact(name, age){
+	console.log(`The name is ${name}. The age is ${age}`);
+}
+*/
