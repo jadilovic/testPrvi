@@ -43,11 +43,11 @@ window.addEventListener("load", ()=>{
 
 	// SIMPLE CALCULATOR
 
-	const operator = prompt("Please enter operator +, -, * or /");
+	const operator = "-"; // prompt("Please enter operator +, -, * or /");
 
-	const number1 = parseFloat(prompt("Please enter first number"));
+	const number1 = 8; // parseFloat(prompt("Please enter first number"));
 
-	const number2 = parseFloat(prompt("Please enter second number"));
+	const number2 = 7; // parseFloat(prompt("Please enter second number"));
 
 	let result;
 
@@ -77,9 +77,74 @@ window.addEventListener("load", ()=>{
 	let arr2 = [...arr1, "three", "four"];
 
 	console.log(arr2);
+
+
 });
 /*
 export default function contact(name, age){
 	console.log(`The name is ${name}. The age is ${age}`);
 }
 */
+	// ARROW FUNCTION
+
+	const a = 3;
+	const b = 4;
+	let x = (a, b) => a * b;
+	console.log(x(a, b));
+
+	let y = function(a, b){
+		return a * b;
+	}
+	console.log(y(a, b));
+
+	let age = 9;
+
+	let greeting = (age < 18) ? () => console.log("Hi kid") : () => console.log("Hi man");
+	greeting();
+
+	function Person() {
+		this.name = "Jack",
+		this.age = 33,
+		this.myName = function(){
+			console.log(this.age);
+
+			function innerFun(){
+				console.log(this.age);
+			}
+
+			innerFun();
+		}
+	}
+
+	let p = new Person();
+	p.myName();
+
+	function Man(){
+		this.name = "Bob",
+		this.age = 44,
+		this.myName = function() {
+			console.log(this.age);
+
+			let innerFun = () => {
+				console.log(this.age);
+			}
+
+			innerFun();
+		}
+	}
+
+	let m = new Man();
+	m.myName();
+
+	let d = function(){
+		console.log(arguments);
+	}
+
+	d(1, 2, 3, 4);
+
+
+	let v = (...arg) => {
+		console.log(arg);
+	}
+	v(4,5,5,5);
+	
